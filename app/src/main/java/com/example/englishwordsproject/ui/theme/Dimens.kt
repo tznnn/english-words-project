@@ -17,7 +17,7 @@ val Float.sdp: Dp
             value > -60 && value < 0 -> "_minus${abs(value)}sdp"
             else -> null
         }
-        //if (ProjectApplication.isInstanceInitialized().not()) return this.dp
+
         return name?.let {
             val context = ProjectApplication.instance
             val id = context.resources.getIdentifier(name, "dimen", context.packageName)
@@ -35,7 +35,6 @@ val Int.sdp: Dp
             value > -60 && value < 0 -> "_minus${abs(value)}sdp"
             else -> null
         }
-        //if (ProjectApplication.isInstanceInitialized().not()) return this.dp
 
         return name?.let {
             val context = ProjectApplication.instance
