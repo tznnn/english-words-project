@@ -5,6 +5,7 @@ import androidx.compose.material.Colors
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
@@ -15,11 +16,21 @@ object EnglishWordsProjectTheme {
         @Composable
         get() = LocalCustomColors.current
 
+    val typography: MaterialTypography
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalAppTypography.current
+
 }
 
 private val LocalCustomColors = staticCompositionLocalOf<ColorPalette> {
     error("No ColorPalette provided")
 }
+
+private val LocalAppTypography = staticCompositionLocalOf {
+    defaultAppTypography()
+}
+
 private val DarkColorPalette = ColorPalette(
     whiteColor = whiteColor,
     gradientBackgroundColor = gradientBackgroundColor
