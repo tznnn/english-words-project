@@ -14,16 +14,16 @@ import com.example.englishwordsproject.R
 @Immutable
 data class MaterialTypography(
     val materialTypography: Typography,
-){
+) {
     val title: TextStyle
         @Composable
         get() {
             return TextStyle(
                 fontFamily = FontFamilies.OpenSans,
-                fontWeight = FontWeight.Normal,
-                fontSize = 45.ssp,
-                lineHeight = 32.ssp,
-                letterSpacing = (0.1f).ssp
+                fontWeight = FontWeight.Bold,
+                fontSize = 24.ssp,
+                lineHeight = 24.ssp,
+                letterSpacing = (0.15f).ssp
             )
         }
 

@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.view.WindowCompat
-import com.example.englishwordsproject.home.HomeScrenn
+import com.example.englishwordsproject.navigation.Navigation
 import com.example.englishwordsproject.ui.theme.EnglishWordsProjectTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             EnglishWordsProjectTheme {
-                HomeScrenn()
+                Navigation()
             }
         }
     }
